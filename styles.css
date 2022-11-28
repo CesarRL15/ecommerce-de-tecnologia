@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fantasy;
+}
+
+.tituloIncio{
+    color: black;
+    text-align: center;
+    font-size: 40;
+    background-color: aqua;
+}
+
+h2{
+    background-color: gold;
+}
+
+#subtituloIndex{
+    color: black;
+}
+
+p{
+    color: silver;
+    background-color: blue;
+}
+
+.fondo {
+    color: black;
+    background-color: aqua;
+}
+
+.border{
+    border-style: solid;
+    border-color: red green blue rgb(255, 149, 0);
+}
+
+.logo{
+    width: 10rem;
+    border-radius: 100%;
+}
+
+.logo2{
+    width: 10rem;
+    border-radius: 100%;
+}
+
+.border2{
+    border-style: solid;
+    border-color: red green blue rgb(255, 149, 0);
+}
