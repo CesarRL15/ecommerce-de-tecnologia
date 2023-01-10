@@ -1,0 +1,23 @@
+main{
+    section{
+        .indexH1{
+            font-family: $tipografiaPrincipal;
+            font-size: 50px;
+            color: brown;
+            text-decoration: underline;
+        }
+        p{
+            font-family: $tipografiaPrincipal;
+        }
+    }
+    section{
+        h2{
+            font-family: $tipografiaPrincipal;
+        }
+        li{
+            .carrito{
+                @include botonCarrito (green);
+            }
+        }
+    }
+}

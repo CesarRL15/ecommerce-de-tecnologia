@@ -1,0 +1,6 @@
+@mixin botonCarrito($fondoBotones:green){
+    font-size: 20px;
+    background-color: $fondoBotones;
+    border-radius: 10px;
+    padding: 1rem;
+}

@@ -1,0 +1,37 @@
+header {
+  background-color: orange;
+}
+header nav {
+  width: 100%;
+}
+header nav .listaOrdenada {
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav .listaOrdenada li {
+  list-style: none;
+}
+header nav .listaOrdenada li a {
+  text-decoration: none;
+  color: black;
+}
+main section .indexH1, main section header nav .listaOrdenada li a h2, header nav .listaOrdenada li a main section h2 {
+  font-family: "fantasy, Trebuchet MS, monospace";
+  font-size: 50px;
+  color: brown;
+  text-decoration: underline;
+}
+main section p {
+  font-family: "fantasy, Trebuchet MS, monospace";
+}
+main section h2 {
+  font-family: "fantasy, Trebuchet MS, monospace";
+}
+main section li .carrito {
+  font-size: 20px;
+  background-color: green;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=base.css.map */
