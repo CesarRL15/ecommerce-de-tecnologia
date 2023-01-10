@@ -18,7 +18,7 @@ header nav .listaOrdenada li a {
 main section .indexH1, main section header nav .listaOrdenada li a h2, header nav .listaOrdenada li a main section h2 {
   font-family: "fantasy, Trebuchet MS, monospace";
   font-size: 50px;
-  color: brown;
+  color: purple;
   text-decoration: underline;
 }
 main section p {

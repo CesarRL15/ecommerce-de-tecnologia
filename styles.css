@@ -62,12 +62,10 @@ color: red;
     top: 50px; left: 30px;
 }*/
 
-/*.nav_item{
-   flex-grow: 1;
-   flex-shrink: 1;
-   border-style:solid ;
-   border-color: white;
-}*/
+.nav_item{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
 
 .nav_item:hover{
     background-color: greenyellow;
