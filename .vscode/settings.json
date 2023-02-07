@@ -1,0 +1,9 @@
+{
+    "terminal.integrated.ignoreProcessNames": [
+        "starship",
+        "oh-my-posh",
+        "bash",
+        "zsh",
+        "bash"
+    ]
+}

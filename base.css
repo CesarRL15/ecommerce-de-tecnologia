@@ -15,11 +15,12 @@ header nav .listaOrdenada li a {
   text-decoration: none;
   color: black;
 }
-main section .indexH1, main section header nav .listaOrdenada li a h2, header nav .listaOrdenada li a main section h2 {
+
+main section .indexH2, main section header nav .listaOrdenada li a h2, header nav .listaOrdenada li a main section h2 {
   font-family: "fantasy, Trebuchet MS, monospace";
   font-size: 50px;
-  color: purple;
-  text-decoration: underline;
+  color: green;
+  text-align: center;
 }
 main section p {
   font-family: "fantasy, Trebuchet MS, monospace";
