@@ -39,7 +39,6 @@ color: red;
 
 .fondo {
     color: black;
-
 }
 
 .border{
@@ -88,6 +87,7 @@ color: red;
     list-style: none;
     background-color: whitesmoke;
 }
+
 
 @media only screen and (min-width: 320px) and (max-width: 500px)  {
     body {
