@@ -69,30 +69,27 @@ const productosElectronicos = [
 // Mostrar los productos almacenados en la base de datos
 
 const productosSector = document.getElementById("productosSector");
-const pruebaNav = document.getElementById("pruebaNav")
+
 
 productosElectronicos.forEach (producto => {
     productosSector.innerHTML += 
     `
-    <div class="card cardCodigo m-0">
-        <img src="${producto.img}" class="card-img-top imagenesProducto" alt="${producto.tipo}">
-        <div class="card-body cuerpoCard m-0">
-        <h2 class="card-title">${producto.tipo}</h2>
-        <h2 class="card-title">${producto.marca}</h2>
-        <h2 class="card-title">${producto.color}</h2>
-        <p class="card-title">Precio: $ ${producto.precio}</p>
-        <p class="card-title">Disponible: ${producto.disponible}
-        <div class ="contenedorCarritoBoton">
+    <div class="card" style="width: 18rem;">
+        <img src="${producto.img}" class="card-img-top" alt="${producto.tipo}">
+        <div class="card-body">
+        <h3 class="card-title">${producto.tipo}</h3>
+        <h3 class="card-title">${producto.marca}</h3>
+        <h3 class="card-title">${producto.color}</h3>
+        <p class="card-text">Precio: $ ${producto.precio}</p>
+        <p class="card-text">Disponible: ${producto.disponible}
+        <div>
             <button class="btn btn-success" id="productos${producto.id}"> Agregar Al Carrito </button>
             </div>
         </div>
     </div>
     `
-    const botonagregarCarrito = document.getElementById (`pruebaNav${producto.id}`)
-    botonagregarCarrito.addEventListener("click", ()=> {
-        agregarAlCarrito(producto.id, carritoCompras);
-    } )
-})
+} )
+
 
 //Agregar Productos Al Carrito
 const carritoCompras = [];
