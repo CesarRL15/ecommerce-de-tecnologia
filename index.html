@@ -8,31 +8,34 @@
   <title>Tec Site Technology</title>
   <link rel="shortcut icon" href="./favicones/informacion.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <header>
     <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./index.html">
-        <img class="navbar-brand logo" src="./imagenes/circuito.png" alt="Logo">
-      </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <img src="./imagenes/Hambur2.PNG" alt="icon">
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav w-100 justify-content-around">
-          <a style="color: white;" class="nav-link active" href="./quienes-somos.html">Quienes Somos?</a>
-          <a  style="color: white;" class="nav-link active" href="./contactanos.html">Contactanos</a>
-          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
-                aria-controls="offcanvasTop"><img src="./imagenes/carrito-de-compras (4).png"></button>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img class="navbar-brand logo" src="./imagenes/circuito.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="./imagenes/Hambur2.PNG" alt="icon">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav w-100 justify-content-around">
+            <a style="color: white;" class="nav-link active" href="./quienes-somos.html">Quienes Somos?</a>
+            <a style="color: white;" class="nav-link active" href="./contactanos.html">Contactanos</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</nav>
+      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+        aria-controls="offcanvasTop"><img src="./imagenes/carrito2.png">
+      </button>
+    </nav>
   </header>
   <main>
     <section class="fondo">
@@ -60,11 +63,11 @@
       </div>
       <h2 id="subtituloIndex">Productos Que Te Pueden Interesar</h2>
     </section>
-    <section  id="productosSector"></section>
+    <section id="productosSector"></section>
     <section>
       <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasTopLabel">Carrito Compras</h5>
+          <h5 class="offcanvas-title" id="offcanvasTopLabel">No Has Agregagdo Nada</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -73,21 +76,25 @@
     </section>
     <br>
     <br>
-    <br> 
+    <br>
     <footer class="bg-dark">
-    <div>
-      <h3>Visita Nuestras Redes Sociales</h3>
-      <div>
+      <div class="d-flex alig-items-center">
+        <div>
+          <i class="fa fa-file"><img src="./imagenes/hacker1.gif" alt="pie-pagina"></i>
+        </div>
+        <h3 class="tituloFooter" style="color: whitesmoke;">Visita Nuestras Redes Sociales!</h3>
+        <div class="iconosPie">
+          <i class="fa fa-file"><img src="./imagenes/facebook.png" alt="pie-pagina"></i>
+          <i class="fa fa-file"><img src="./imagenes/instagram.png" alt="pie-pagina"></i>
+          <i class="fa fa-file"><img src="./imagenes/whatsapp.png" alt="pie-pagina"></i>
+        </div>
       </div>
-    </div>
     </footer>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
     crossorigin="anonymous"></script>
-  <script src="./scripts/index.js"></script>
-  <script src="./scripts/condicionales y bucles.js"></script>
-  <script src="./scripts/funciones-de-orden-superior.js"></script>
+  <script src="./scripts/index2.js"></script>
 </body>
 
 </html>
