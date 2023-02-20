@@ -95,7 +95,7 @@ color: red;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 15px;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 img{
@@ -112,6 +112,18 @@ img{
 .iconosPie{
     display: flex;
     padding: 5rem 1rem;
+}
+
+.contadorCarrito{
+    color: green;
+    margin: 0;
+    background-color: white;
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
 }
 
 @media only screen and (max-width: 600px)  {

@@ -1,5 +1,11 @@
 //Base de datos con JSON
 const productosSector = document.getElementById("productosSector");
+const contenedorContadorCarrito = document.getElementById("contenedorContadorCarrito");
+const carritoOffcanvas = document.getElementById ("carritoOffcanvas");
+const precioTotalCarrito = document.getElementById ("precioTotalCarrito");
+const contador = document.createElement ("p");
+
+const carritoDeCompras =[];
 
 const productosElectronicos = [
     {id: 1, img: "./imagenes/cell.png", tipo: "Celular", marca: "Motorola", precio: 1500, color: "Azul marino", disponible: 1},
@@ -19,9 +25,9 @@ const productosElectronicos = [
 
 // Mostrar los productos almacenados de la base de datos en la pagina 
 
-productosElectronicos.forEach (producto => {
-    productosSector.innerHTML += 
-    `
+productosElectronicos.forEach((producto) => {
+    const div = document.createElement("div");
+    div.innerHTML += `
     <div class="card" style="width: 18rem;">
         <img src="${producto.img}" class="card-img-top" alt="${producto.tipo}">
         <div class="card-body">
@@ -35,8 +41,75 @@ productosElectronicos.forEach (producto => {
             </div>
         </div>
     </div>
-    `
+    `;
+    productosSector.appendChild(div);
+
+    const botonAgregar = document.getElementById(`producto${producto.id}`);
+    botonAgregar.addEventListener("click", () => {
+    agregarCarrito(producto.id, carritoDeCompras);
+    agregarContadorCarrito();
+    mostrarCarrito();
+    })
 })
 
+const agregarCarrito = (productoSeleccionado, carrito) => {
+    const existeProducto = carritoDeCompras.some(producto => producto.id === productoSeleccionado);
+    const productoElegido = productosElectronicos.find((producto) => producto.id === productoSeleccionado);
+    if (existeProducto){
+        let precioInicial = productoElegido.precio
+        productoElegido.disponible++;
+        productoElegido.precio = productoElegido.disponible * precioInicial;
+    }else{
+        carrito.push (productoElegido);
+        console.log ("Producto Agregado Correctamente", carrito);
+    }
+}
+
+const agregarContadorCarrito = () => {
+    if (carritoDeCompras.length !== 0) {
+    contador.textContent = carritoDeCompras.length;
+    contador.classList.add("contadorCarrito");
+    contenedorContadorCarrito.appendChild(contador);
+    }else{
+        contador.textContent="";
+        contador.classList.remove("contadorCarrito");
+    }
+}
+
+const mostrarCarrito = () => {
+    carritoOffcanvas.innerHTML = "";
+    carritoDeCompras.forEach((producto) => {
+    const tr = document.createElement("tr");
+
+    tr.innerHTML += `
+        <td>
+        <td class="infoProducto">${producto.tipo}</td>
+        <td class="infoProducto">${producto.marca}</td>
+        <td class="infoProducto">${producto.disponible}</td>
+        <td class="infoProducto">${producto.precio}</td>
+        <td>
+        <i class="fa fa-file"><img src="./imagenes/Eliminar.png" alt="icon" id="eliminar${producto.id}"></i>
+        </td>
+        </td>
+        `;
+    carritoOffcanvas.appendChild(tr);
+    const botonEliminar = document.getElementById(`eliminar${producto.id}`);
+    botonEliminar.addEventListener("click", () => {
+        eliminarProducto(producto.id);
+        })
+    })
+    const totalCarrito = carritoDeCompras.reduce((acumulador, productos) => acumulador + productos.precio, 0);
+    precioTotalCarrito.innerText = `Precio Total: $${totalCarrito}`;
+}
+
+const eliminarProducto = (productoClickeado) => {
+    const productoEleminado = carritoDeCompras.find(
+    (producto) => producto.id === productoClickeado
+    )
+    const index = carritoDeCompras.indexOf(productoEleminado);
+    carritoDeCompras.splice(index, 1);
+    agregarContadorCarrito();
+    mostrarCarrito();
+}
 
 
